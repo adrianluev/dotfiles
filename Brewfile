@@ -12,6 +12,8 @@ brew "gcc"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Fast, disk space efficient package manager

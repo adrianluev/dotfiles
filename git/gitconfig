@@ -6,3 +6,11 @@
 [user]
 	name = alc
 	email = 58182697+adrianluev@users.noreply.github.com
+[init]
+	defaultBranch = main
+[credential]
+	helper = osxkeychain
+[core]
+	editor = nvim
+[push]
+	autoSetupRemote = true
