@@ -6,6 +6,8 @@ brew "bat"
 brew "eza"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Simple, fast and user-friendly alternative to find (fzf-lua file search)
+brew "fd"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
@@ -18,10 +20,14 @@ brew "git-lfs"
 brew "neovim"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Search tool like grep (fzf-lua live grep)
+brew "ripgrep"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Simplified and community-driven man pages
 brew "tldr"
+# Tree-sitter CLI, used by nvim-treesitter to build parsers
+brew "tree-sitter-cli"
 # Terminal multiplexer
 brew "tmux"
 # Fish-like fast/unobtrusive autosuggestions for zsh
