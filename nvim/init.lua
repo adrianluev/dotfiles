@@ -65,15 +65,15 @@ map("n", "<C-k>", function() navigate("k", "U") end, { desc = "Go to split/pane 
 map("n", "<C-l>", function() navigate("l", "R") end, { desc = "Go to split/pane right" })
 
 -- Copy "file:line" to clipboard — handy for pointing an AI/coworker at a spot.
--- (<leader>y, not <leader>c: <leader>c... would wait on <leader>ca.)
-map("n", "<leader>y", function()
+-- Keep <leader>c free of longer <leader>c... maps, or it waits timeoutlen.
+map("n", "<leader>c", function()
   local loc = vim.fn.expand("%:p") .. ":" .. vim.fn.line(".")
   vim.fn.setreg("+", loc)
   vim.notify("Copied: " .. loc)
 end, { desc = "Copy file:line to clipboard" })
 
 -- Visual mode: copy "file:startline-endline" for a selected range
-map("v", "<leader>y", function()
+map("x", "<leader>c", function()  -- "x" = visual only; "v" would also hit select mode (snippets)
   local a, b = vim.fn.line("v"), vim.fn.line(".")
   if a > b then a, b = b, a end -- selection made upwards
   local loc = vim.fn.expand("%:p") .. ":" .. a .. "-" .. b

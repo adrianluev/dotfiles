@@ -65,7 +65,7 @@ forwards the keys to nvim when the pane runs nvim/fzf (`is_vim` in tmux.conf).
 | `<leader>pf` / `pb` / `ps` | Find files / open buffers / grep project (fzf-lua) |
 | `<leader>pv` | Toggle file explorer (nvim-tree) |
 | `<leader>pr` | Review working-tree changes as a book (paginate; only if `~/Desktop/personal_projects/paginate` exists) |
-| `<leader>y` | Copy `file:line` (visual: `file:start-end`) to clipboard |
+| `<leader>c` | Copy `file:line` (visual: `file:start-end`) to clipboard |
 | `<leader>e` | Show diagnostic under cursor |
 | `<leader>f` | Format JSON with jq (JSON buffers only) |
 | `<Esc>` | Clear search highlight |
@@ -93,7 +93,8 @@ In fzf-lua `git_status`: `Ctrl-h` stage, `Ctrl-l` unstage.
 
 ### Deliberate choices (avoiding collisions)
 
-- Copy-location is `<leader>y`, not `<leader>c`, which would wait on `<leader>ca`.
+- Copy-location is `<leader>c`; nothing else may start with `<leader>c`, or it
+  would wait for the longer key (why there is no custom `<leader>ca`).
 - No custom `gr`/`gi`/`<leader>rn`/`<leader>ca`: Neovim's built-in `gr*` LSP maps
   cover them, and a custom `gr` would delay all of them. Built-in `gi`
   (resume insert) is left intact.
